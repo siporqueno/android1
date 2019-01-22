@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Lesson One</string>
-    <string name="hello">Weather surprises</string>
+    <string name="weath">Weather surprises</string>
+    <string name="temp">Temperature</string>
+    <string name="WT">Sunny</string>
+    <string name="city_country">Moscow, RU</string>
+    <string name="text_degrees">%1$d degrees C</string>
 </resources>
