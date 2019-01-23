@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    int Temperature;
+    int temperature;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
         place.setText(R.string.city_country);
 
         TextView T = findViewById(R.id.textView2);
-        Temperature = -14;
-        T.setText(getResources().getString(R.string.text_degrees, Temperature));
+        temperature = -14;
+        T.setText(getResources().getString(R.string.text_degrees, temperature));
 
         final TextView WType = findViewById(R.id.textView3);
         WType.setText(R.string.WT);
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
          button.setOnClickListener(new View.OnClickListener() {
              public void onClick(View v) {
                  // Code here executes on main thread after user presses button
-                 WType.setText("Snow again");
+                 WType.setText(R.string.weather_update);
              }
          });
 
