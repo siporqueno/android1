@@ -7,7 +7,6 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/weath"
@@ -20,7 +19,7 @@
         app:layout_constraintVertical_bias="0.050" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/PLACE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -33,7 +32,7 @@
         app:layout_constraintVertical_bias="0.350" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/T"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/temp"
@@ -46,7 +45,7 @@
         app:layout_constraintVertical_bias="0.450" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/W_TYPE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/WT"
@@ -59,10 +58,10 @@
         app:layout_constraintVertical_bias="0.550" />
 
     <Button
-        android:id="@+id/theButton"
+        android:id="@+id/refresh_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Refresh"
+        android:text="@string/refresh_button_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
