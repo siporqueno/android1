@@ -6,5 +6,11 @@
     <string name="city_country">Moscow, RU</string>
     <string name="text_degrees">%1$f degrees C</string>
     <string name="weather_update">Snow again</string>
-    <string name="refresh_button_name">Refresh</string>
+    <string name="back_button_name">Back</string>
+    <string name="pr">Pressure</string>
+    <string name="wd">Wind speed</string>
+    <string name="hm">Humidity</string>
+    <string name="kaz">Kazan, RU</string>
+    <string name="mos">Moscow, RU</string>
+    <string name="spb">St.Petersburg, RU</string>
 </resources>
