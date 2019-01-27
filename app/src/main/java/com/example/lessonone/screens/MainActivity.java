@@ -18,23 +18,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ViewUtilities.makeToast(getApplicationContext(), "onCreate");
-        Button button = findViewById(R.id.button);
-        final RadioGroup rgr = findViewById(R.id.RGR);
-        final CheckBox pr = findViewById(R.id.PR);
-        final CheckBox wd = findViewById(R.id.WD);
-        final CheckBox hm = findViewById(R.id.HM);
+        Button buttonGetWeather = findViewById(R.id.button_get_weather);
+        final RadioGroup radioGroupCity = findViewById(R.id.radio_group_city);
+        final CheckBox checkboxPressure = findViewById(R.id.checkbox_pressure);
+        final CheckBox checkboxWind = findViewById(R.id.checkbox_wind);
+        final CheckBox checkboxHumidity = findViewById(R.id.checkbox_humidity);
+        // TextView service = findViewById(R.id.service);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        buttonGetWeather.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                intent.putExtra("city", rgr.getCheckedRadioButtonId());
-                intent.putExtra("pressure", pr.isChecked());
-                intent.putExtra("wind", wd.isChecked());
-                intent.putExtra("humidity", hm.isChecked());
+                intent.putExtra("city", radioGroupCity.getCheckedRadioButtonId());
+                intent.putExtra("pressure", checkboxPressure.isChecked());
+                intent.putExtra("wind", checkboxWind.isChecked());
+                intent.putExtra("humidity", checkboxHumidity.isChecked());
                 startActivity(intent);
             }
         });
+
+        // service.setText(""+radioGroupCity.getCheckedRadioButtonId());
 
     }
 
