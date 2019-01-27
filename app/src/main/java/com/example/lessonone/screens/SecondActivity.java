@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.lessonone.R;
+import com.example.lessonone.utils.ViewUtilities;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -17,7 +18,7 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        // ViewUtilities.makeToast(getApplicationContext(), "SECOND onCreate");
+        ViewUtilities.makeToast(getApplicationContext(), "SECOND onCreate");
         Intent intent = getIntent();
         int city = intent.getIntExtra("city",-1);
         boolean pressure = intent.getBooleanExtra("pressure", false);
@@ -58,8 +59,9 @@ public class SecondActivity extends AppCompatActivity {
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent2 = new Intent(SecondActivity.this, MainActivity.class);
-                startActivity(intent2);
+                onBackPressed();
+                /* Intent intent2 = new Intent(SecondActivity.this, MainActivity.class);
+                startActivity(intent2); */
             }
             /* public void onClick(View v) {
                  // Code here executes on main thread after user presses button
@@ -69,7 +71,7 @@ public class SecondActivity extends AppCompatActivity {
 
     }
 
-    /* @Override
+    @Override
     protected void onStart() {
         super.onStart();
         ViewUtilities.makeToast(getApplicationContext(), "SECOND onStart");
@@ -103,5 +105,5 @@ public class SecondActivity extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
         ViewUtilities.makeToast(getApplicationContext(), "SECOND onRestart");
-    } */
+    }
 }
