@@ -9,7 +9,8 @@ import android.widget.CheckBox;
 import android.widget.RadioGroup;
 
 import com.example.lessonone.R;
-import com.example.lessonone.utils.ViewUtilities;
+
+// import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ViewUtilities.makeToast(getApplicationContext(), "onCreate");
+        // ViewUtilities.makeToast(getApplicationContext(), "onCreate");
         Button buttonGetWeather = findViewById(R.id.button_get_weather);
         final RadioGroup radioGroupCity = findViewById(R.id.radio_group_city);
         final CheckBox checkboxPressure = findViewById(R.id.checkbox_pressure);
@@ -37,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // service.setText(""+radioGroupCity.getCheckedRadioButtonId());
+        // service.setText(""+R.id.a+"\n"+R.id.b+"\n"+R.id.c);
 
     }
 
-    @Override
+    /* @Override
     protected void onStart() {
         super.onStart();
         ViewUtilities.makeToast(getApplicationContext(), "onStart");
@@ -75,5 +76,5 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
         ViewUtilities.makeToast(getApplicationContext(), "onRestart");
-    }
+    } */
 }

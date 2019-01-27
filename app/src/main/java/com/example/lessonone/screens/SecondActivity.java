@@ -8,18 +8,16 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.lessonone.R;
-import com.example.lessonone.utils.ViewUtilities;
 
 public class SecondActivity extends AppCompatActivity {
 
     double temperature;
-    int city;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        ViewUtilities.makeToast(getApplicationContext(), "SECOND onCreate");
+        // ViewUtilities.makeToast(getApplicationContext(), "SECOND onCreate");
         Intent intent = getIntent();
         int city = intent.getIntExtra("city",-1);
         boolean pressure = intent.getBooleanExtra("pressure", false);
@@ -29,14 +27,16 @@ public class SecondActivity extends AppCompatActivity {
         TextView place = findViewById(R.id.place);
 
         // city = city - 3*(int) (city/3);
-        /* switch (city) {
+
+        switch (city) {
             case -1: place.setText("City is not selected"+city); break;
-            case 0: place.setText(R.string.spb+city); break;
-            case 1: place.setText(R.string.kaz+city); break;
-            case 2: place.setText(R.string.mos+city); break;
+            case R.id.a: place.setText(R.string.kaz); break;
+            case R.id.b: place.setText(R.string.mos); break;
+            case R.id.c: place.setText(R.string.spb); break;
             default: place.setText("Something went wrong "+city);
-        } */
-        place.setText(""+city);
+        }
+
+        // place.setText(""+city+"\n"+R.id.a+"\n"+R.id.b+"\n"+R.id.c);
 
         TextView T = findViewById(R.id.T);
         temperature = -14.5;
@@ -69,7 +69,7 @@ public class SecondActivity extends AppCompatActivity {
 
     }
 
-    @Override
+    /* @Override
     protected void onStart() {
         super.onStart();
         ViewUtilities.makeToast(getApplicationContext(), "SECOND onStart");
@@ -103,5 +103,5 @@ public class SecondActivity extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
         ViewUtilities.makeToast(getApplicationContext(), "SECOND onRestart");
-    }
+    } */
 }
