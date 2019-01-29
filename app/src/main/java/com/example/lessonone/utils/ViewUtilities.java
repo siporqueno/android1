@@ -9,5 +9,6 @@ public final class ViewUtilities {
         Toast.makeText(context, toast, Toast.LENGTH_SHORT).show();
     }
 
-    private ViewUtilities () {}
+    private ViewUtilities() {
+    }
 }

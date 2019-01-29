@@ -4,7 +4,10 @@
     <string name="temp">Temperature</string>
     <string name="WT">Sunny</string>
     <string name="city_country">Moscow, RU</string>
+    <!--
     <string name="text_degrees">%1$f degrees C</string>
+    -->
+    <string name="text_degrees">%.2f degrees C</string>
     <string name="weather_update">Snow again</string>
     <string name="back_button_name">Back</string>
     <string name="pr">Pressure</string>

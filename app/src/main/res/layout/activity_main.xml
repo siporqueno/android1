@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Please select city"
-        android:textSize="30sp"/>
+        android:textSize="30sp" />
 
     <RadioGroup
         android:id="@+id/radio_group_city"
@@ -19,46 +19,50 @@
             android:id="@+id/a"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/kaz"/>
+            android:text="@string/kaz" />
+
         <RadioButton
             android:id="@+id/b"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/mos"/>
+            android:text="@string/mos" />
+
         <RadioButton
             android:id="@+id/c"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/spb"/>
+            android:text="@string/spb" />
     </RadioGroup>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Additional weather parametres"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
     <android.support.v7.widget.AppCompatCheckBox
         android:id="@+id/checkbox_pressure"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pr"/>
+        android:text="@string/pr" />
+
     <android.support.v7.widget.AppCompatCheckBox
         android:id="@+id/checkbox_wind"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/wd"/>
+        android:text="@string/wd" />
+
     <android.support.v7.widget.AppCompatCheckBox
         android:id="@+id/checkbox_humidity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hm"/>
+        android:text="@string/hm" />
 
     <Button
         android:id="@+id/button_get_weather"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text = "Get Weather"/>
+        android:text="Get Weather" />
 
     <!--
     <TextView
