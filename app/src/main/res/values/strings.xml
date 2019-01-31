@@ -1,14 +1,8 @@
 <resources>
-    <string name="app_name">Lesson One</string>
+    <string name="app_name">Attempt one</string>
     <string name="weath">Weather surprises</string>
-    <string name="temp">Temperature</string>
-    <string name="WT">Sunny</string>
-    <string name="city_country">Moscow, RU</string>
-    <!--
-    <string name="text_degrees">%1$f degrees C</string>
-    -->
+    <string name="weather_type">Sunny</string>
     <string name="text_degrees">%.2f degrees C</string>
-    <string name="weather_update">Snow again</string>
     <string name="back_button_name">Back</string>
     <string name="pr">Pressure</string>
     <string name="wd">Wind speed</string>
@@ -16,4 +10,8 @@
     <string name="kaz">Kazan, RU</string>
     <string name="mos">Moscow, RU</string>
     <string name="spb">St.Petersburg, RU</string>
+    <string name="button_get_weather_name">Get Weather</string>
+    <string name="select_city">Please select city</string>
+    <string name="add_weather_parametres">Additional weather parametres</string>
+    <string name="city_not_selected">City is not selected</string>
 </resources>

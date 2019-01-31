@@ -28,7 +28,7 @@
         style="@style/TextStandardStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/WT" />
+        android:text="@string/weather_type" />
 
     <TextView
         android:id="@+id/pressure_2"
