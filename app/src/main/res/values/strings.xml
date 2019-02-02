@@ -14,4 +14,6 @@
     <string name="select_city">Please select city</string>
     <string name="add_weather_parametres">Additional weather parametres</string>
     <string name="city_not_selected">City is not selected</string>
+    <string name="double_check_with_yandex">Double check with Yandex</string>
+    <string name="share_with_friends">Share with friends</string>
 </resources>

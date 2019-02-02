@@ -15,4 +15,6 @@
     <string name="select_city">Выберите город</string>
     <string name="add_weather_parametres">Другие параметры погоды</string>
     <string name="city_not_selected">Город не выбран</string>
+    <string name="double_check_with_yandex">Перепроверить с ЯНДЕКС</string>
+    <string name="share_with_friends">Поделиться с друзьями</string>
 </resources>

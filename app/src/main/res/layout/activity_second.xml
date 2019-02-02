@@ -62,4 +62,20 @@
         android:layout_marginLeft="4dp"
         android:text="@string/back_button_name" />
 
+    <Button
+        android:id="@+id/button_double_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:text="@string/double_check_with_yandex" />
+
+    <Button
+        android:id="@+id/button_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:text="@string/share_with_friends" />
+
 </LinearLayout>
