@@ -2,77 +2,56 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:theme="@style/StandardScreenTheme">
 
     <TextView
+        style="@style/TextHeaderStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:text="@string/weath"
-        android:textColor="@color/colorAccent"
-        android:textSize="30sp" />
+        android:text="@string/weath" />
 
     <TextView
         android:id="@+id/place"
+        style="@style/TextStandardStyle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:textColor="@color/colorBlue"
-        android:textSize="30sp" />
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/t"
+        style="@style/TextStandardStyle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:text="@string/temp"
-        android:textColor="@color/colorBlue"
-        android:textSize="30sp" />
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/w_type"
+        style="@style/TextStandardStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:text="@string/WT"
-        android:textColor="@color/colorBlue"
-        android:textSize="30sp" />
+        android:text="@string/weather_type" />
 
     <TextView
         android:id="@+id/pressure_2"
+        style="@style/TextStandardStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
         android:text="@string/pr"
-        android:textColor="@color/colorBlue"
-        android:textSize="30sp"
         android:visibility="gone" />
 
     <TextView
         android:id="@+id/wind_2"
+        style="@style/TextStandardStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
         android:text="@string/wd"
-        android:textColor="@color/colorBlue"
-        android:textSize="30sp"
         android:visibility="gone" />
 
     <TextView
         android:id="@+id/humidity_2"
+        style="@style/TextStandardStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
         android:text="@string/hm"
-        android:textColor="@color/colorBlue"
-        android:textSize="30sp"
         android:visibility="gone" />
 
     <Button

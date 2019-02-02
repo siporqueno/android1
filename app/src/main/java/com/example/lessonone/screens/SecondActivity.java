@@ -15,7 +15,7 @@ public class SecondActivity extends AppCompatActivity {
 
     private static final String TAG = SecondActivity.class.getSimpleName();
 
-    double temperature;
+    float temperature;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class SecondActivity extends AppCompatActivity {
 
         switch (city) {
             case -1:
-                place.setText("City is not selected" + city);
+                place.setText(getString(R.string.city_not_selected) /*+ city*/);
                 break;
             case R.id.a:
                 place.setText(R.string.kaz);
@@ -53,11 +53,11 @@ public class SecondActivity extends AppCompatActivity {
         // place.setText(""+city+"\n"+R.id.a+"\n"+R.id.b+"\n"+R.id.c);
 
         TextView t = findViewById(R.id.t);
-        temperature = -14.5;
+        temperature = -14.5f;
         t.setText(getResources().getString(R.string.text_degrees, temperature));
 
         final TextView wType = findViewById(R.id.w_type);
-        wType.setText(R.string.WT);
+        wType.setText(R.string.weather_type);
 
         TextView pressure2 = findViewById(R.id.pressure_2);
         if (pressure) pressure2.setVisibility(View.VISIBLE);
