@@ -3,7 +3,7 @@
     <string name="app_name">Первый блин</string>
     <string name="weath">Сюрпризы погоды</string>
     <string name="weather_type">Солнечно</string>
-    <string name="text_degrees">%.2f градусов C</string>
+    <string name="text_degrees">%.2f \u2103</string>
     <string name="back_button_name">Назад</string>
     <string name="pr">Давление</string>
     <string name="wd">Скорость ветра</string>

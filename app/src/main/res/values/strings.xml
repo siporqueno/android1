@@ -2,7 +2,7 @@
     <string name="app_name">Attempt one</string>
     <string name="weath">Weather surprises</string>
     <string name="weather_type">Sunny</string>
-    <string name="text_degrees">%.2f degrees C</string>
+    <string name="text_degrees">%.2f \u2103</string>
     <string name="back_button_name">Back</string>
     <string name="pr">Pressure</string>
     <string name="wd">Wind speed</string>
