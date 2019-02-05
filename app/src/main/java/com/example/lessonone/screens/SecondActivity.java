@@ -1,6 +1,7 @@
 package com.example.lessonone.screens;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -80,6 +81,42 @@ public class SecondActivity extends AppCompatActivity {
                  // Code here executes on main thread after user presses button
                  wType.setText(R.string.weather_update);
              } */
+        });
+
+        Button buttonDoubleCheck = findViewById(R.id.button_double_check);
+        buttonDoubleCheck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Code here executes on main thread after user presses button
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                Uri uri = Uri.parse("http://yandex.ru/pogoda");
+                intent.setData(uri);
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent);
+                } else ViewUtilities.makeToast(getApplicationContext(), "There is no relevant app");
+
+                Log.d(TAG, "обработка нажатия кнопки Double check with Yandex");
+            }
+        });
+
+        Button buttonShare = findViewById(R.id.button_share);
+        buttonShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Code here executes on main thread after user presses button
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                //Uri uri = Uri.parse("http://yandex.ru/pogoda");
+                Uri uri = Uri.parse("mailto:");
+                intent.setData(uri);
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"a@a.a"}); // Email address
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Email subject"); // Email subject
+                intent.putExtra(Intent.EXTRA_TEXT, "Email body"); // Email body
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent);
+                } else ViewUtilities.makeToast(getApplicationContext(), "There is no relevant app");
+
+                Log.d(TAG, "обработка нажатия кнопки Share with friends");
+            }
         });
 
     }

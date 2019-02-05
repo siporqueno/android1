@@ -3,7 +3,7 @@
     <string name="app_name">Первый блин</string>
     <string name="weath">Сюрпризы погоды</string>
     <string name="weather_type">Солнечно</string>
-    <string name="text_degrees">%.2f градусов C</string>
+    <string name="text_degrees">%.2f \u2103</string>
     <string name="back_button_name">Назад</string>
     <string name="pr">Давление</string>
     <string name="wd">Скорость ветра</string>
@@ -15,4 +15,6 @@
     <string name="select_city">Выберите город</string>
     <string name="add_weather_parametres">Другие параметры погоды</string>
     <string name="city_not_selected">Город не выбран</string>
+    <string name="double_check_with_yandex">Перепроверить с ЯНДЕКС</string>
+    <string name="share_with_friends">Поделиться с друзьями</string>
 </resources>
