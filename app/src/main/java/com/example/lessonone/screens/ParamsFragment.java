@@ -60,7 +60,6 @@ public class ParamsFragment extends Fragment implements View.OnClickListener {
             }
         });
 
-        // service.setText(""+R.id.a+"\n"+R.id.b+"\n"+R.id.c);
 
     }
 

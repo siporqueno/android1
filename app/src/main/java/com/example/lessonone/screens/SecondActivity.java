@@ -1,8 +1,8 @@
 package com.example.lessonone.screens;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
@@ -22,8 +22,8 @@ public class SecondActivity extends AppCompatActivity {
 
         // Create fragment
         OutputFragment f1 = new OutputFragment();
-        // getFragmentManager().beginTransaction().add(R.id.frag_output, f1).commit();
-        FragmentManager fm = getFragmentManager();
+        f1.setArguments(getIntent().getExtras());
+        FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         ft.add(R.id.frag_output, f1);
         ft.commit();

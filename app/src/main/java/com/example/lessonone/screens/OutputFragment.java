@@ -123,7 +123,6 @@ public class OutputFragment extends Fragment implements View.OnClickListener {
             public void onClick(View view) {
                 // Code here executes on main thread after user presses button
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                //Uri uri = Uri.parse("http://yandex.ru/pogoda");
                 Uri uri = Uri.parse("mailto:");
                 intent.setData(uri);
                 intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"a@a.a"}); // Email address
@@ -136,28 +135,6 @@ public class OutputFragment extends Fragment implements View.OnClickListener {
                 Log.d(TAG, "обработка нажатия кнопки Share with friends");
             }
         });
-
-        /* Button buttonGetWeather = getActivity().findViewById(R.id.button_get_weather);
-        final RadioGroup radioGroupCity = getActivity().findViewById(R.id.radio_group_city);
-        final CheckBox checkboxPressure = getActivity().findViewById(R.id.checkbox_pressure);
-        final CheckBox checkboxWind = getActivity().findViewById(R.id.checkbox_wind);
-        final CheckBox checkboxHumidity = getActivity().findViewById(R.id.checkbox_humidity);
-        // TextView service = findViewById(R.id.service);
-
-        buttonGetWeather.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), SecondActivity.class);
-                intent.putExtra("city", radioGroupCity.getCheckedRadioButtonId());
-                intent.putExtra("pressure", checkboxPressure.isChecked());
-                intent.putExtra("wind", checkboxWind.isChecked());
-                intent.putExtra("humidity", checkboxHumidity.isChecked());
-                startActivity(intent);
-                Log.d(TAG, "обработка нажатия кнопки Get Weather");
-            }
-        }); */
-
-        // service.setText(""+R.id.a+"\n"+R.id.b+"\n"+R.id.c);
 
     }
 
