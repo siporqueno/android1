@@ -4,79 +4,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/select_city"
-        android:textSize="30sp" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <RadioGroup
-        android:id="@+id/radio_group_city"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        <fragment
+            android:id="@+id/parametres"
+            android:name="com.example.lessonone.screens.ParamsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <RadioButton
-            android:id="@+id/a"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/kaz" />
+        </fragment>
 
-        <RadioButton
-            android:id="@+id/b"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/mos" />
+    </FrameLayout>
 
-        <RadioButton
-            android:id="@+id/c"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/spb" />
-    </RadioGroup>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/add_weather_parametres"
-        android:textSize="20sp" />
-
-    <android.support.v7.widget.AppCompatCheckBox
-        android:id="@+id/checkbox_pressure"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pr" />
-
-    <android.support.v7.widget.AppCompatCheckBox
-        android:id="@+id/checkbox_wind"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/wd" />
-
-    <android.support.v7.widget.AppCompatCheckBox
-        android:id="@+id/checkbox_humidity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hm" />
-
-    <Button
-        android:id="@+id/button_get_weather"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_get_weather_name" />
-
-    <!--
-    <TextView
-        android:id="@+id/service"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"/>
-        -->
-
-    <android.support.v7.widget.AppCompatImageView
-        android:layout_width="200sp"
-        android:layout_height="200sp"
-        android:layout_marginTop="30sp"
-        android:layout_gravity="center"
-        android:src="@drawable/lightning" />
 
 </LinearLayout>

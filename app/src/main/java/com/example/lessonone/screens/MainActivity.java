@@ -1,18 +1,12 @@
 package com.example.lessonone.screens;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.RadioGroup;
 
 import com.example.lessonone.R;
 import com.example.lessonone.utils.ViewUtilities;
 
-// import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,27 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ViewUtilities.makeToast(getApplicationContext(), "onCreate");
         Log.d(TAG, "onCreate");
-        Button buttonGetWeather = findViewById(R.id.button_get_weather);
-        final RadioGroup radioGroupCity = findViewById(R.id.radio_group_city);
-        final CheckBox checkboxPressure = findViewById(R.id.checkbox_pressure);
-        final CheckBox checkboxWind = findViewById(R.id.checkbox_wind);
-        final CheckBox checkboxHumidity = findViewById(R.id.checkbox_humidity);
-        // TextView service = findViewById(R.id.service);
 
-        buttonGetWeather.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                intent.putExtra("city", radioGroupCity.getCheckedRadioButtonId());
-                intent.putExtra("pressure", checkboxPressure.isChecked());
-                intent.putExtra("wind", checkboxWind.isChecked());
-                intent.putExtra("humidity", checkboxHumidity.isChecked());
-                startActivity(intent);
-                Log.d(TAG, "обработка нажатия кнопки Get Weather");
-            }
-        });
-
-        // service.setText(""+R.id.a+"\n"+R.id.b+"\n"+R.id.c);
 
     }
 
