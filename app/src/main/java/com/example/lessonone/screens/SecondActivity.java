@@ -25,7 +25,8 @@ public class SecondActivity extends AppCompatActivity {
         f1.setArguments(getIntent().getExtras());
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.add(R.id.frag_output, f1);
+        // Changed add for replace to avoid overlapping of previous and current fragments
+        ft.replace(R.id.frag_output, f1);
         ft.commit();
 
     }

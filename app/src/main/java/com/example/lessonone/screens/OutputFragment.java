@@ -48,9 +48,8 @@ public class OutputFragment extends Fragment implements View.OnClickListener {
         boolean wind = intent.getBooleanExtra("wind", false);
         boolean humidity = intent.getBooleanExtra("humidity", false);
 
-        TextView place = getActivity().findViewById(R.id.place);
-
-        // city = city - 3*(int) (city/3);
+        // Changed getActivity() for getView()
+        TextView place = getView().findViewById(R.id.place);
 
         switch (city) {
             case -1:
@@ -71,23 +70,29 @@ public class OutputFragment extends Fragment implements View.OnClickListener {
 
         // place.setText(""+city+"\n"+R.id.a+"\n"+R.id.b+"\n"+R.id.c);
 
-        TextView t = getActivity().findViewById(R.id.t);
+        // Changed getActivity() for getView()
+        TextView t = getView().findViewById(R.id.t);
         temperature = -14.5f;
         t.setText(getResources().getString(R.string.text_degrees, temperature));
 
-        final TextView wType = getActivity().findViewById(R.id.w_type);
+        // Changed getActivity() for getView()
+        final TextView wType = getView().findViewById(R.id.w_type);
         wType.setText(R.string.weather_type);
 
-        TextView pressure2 = getActivity().findViewById(R.id.pressure_2);
+        // Changed getActivity() for getView()
+        TextView pressure2 = getView().findViewById(R.id.pressure_2);
         if (pressure) pressure2.setVisibility(View.VISIBLE);
 
-        TextView wind2 = getActivity().findViewById(R.id.wind_2);
+        // Changed getActivity() for getView()
+        TextView wind2 = getView().findViewById(R.id.wind_2);
         if (wind) wind2.setVisibility(View.VISIBLE);
 
-        TextView humidity2 = getActivity().findViewById(R.id.humidity_2);
+        // Changed getActivity() for getView()
+        TextView humidity2 = getView().findViewById(R.id.humidity_2);
         if (humidity) humidity2.setVisibility(View.VISIBLE);
 
-        Button buttonBack = getActivity().findViewById(R.id.button_back);
+        // Changed getActivity() for getView()
+        Button buttonBack = getView().findViewById(R.id.button_back);
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,7 +106,8 @@ public class OutputFragment extends Fragment implements View.OnClickListener {
              } */
         });
 
-        Button buttonDoubleCheck = getActivity().findViewById(R.id.button_double_check);
+        // Changed getActivity() for getView()
+        Button buttonDoubleCheck = getView().findViewById(R.id.button_double_check);
         buttonDoubleCheck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -117,7 +123,8 @@ public class OutputFragment extends Fragment implements View.OnClickListener {
             }
         });
 
-        Button buttonShare = getActivity().findViewById(R.id.button_share);
+        // Changed getActivity() for getView()
+        Button buttonShare = getView().findViewById(R.id.button_share);
         buttonShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
