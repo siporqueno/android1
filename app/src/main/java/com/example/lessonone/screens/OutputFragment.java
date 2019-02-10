@@ -48,25 +48,29 @@ public class OutputFragment extends Fragment implements View.OnClickListener {
         boolean wind = intent.getBooleanExtra("wind", false);
         boolean humidity = intent.getBooleanExtra("humidity", false);
 
-        // Changed getActivity() for getView()
-        TextView place = getView().findViewById(R.id.place);
+        // Changed getActivity() for getView() and added check for null
 
-        switch (city) {
-            case -1:
-                place.setText(getString(R.string.city_not_selected) /*+ city*/);
-                break;
-            case R.id.a:
-                place.setText(R.string.kaz);
-                break;
-            case R.id.b:
-                place.setText(R.string.mos);
-                break;
-            case R.id.c:
-                place.setText(R.string.spb);
-                break;
-            default:
-                place.setText("Something went wrong " + city);
+        if (getView().findViewById(R.id.place) != null) {
+            TextView place = getView().findViewById(R.id.place);
+            switch (city) {
+                case -1:
+                    place.setText(getString(R.string.city_not_selected) /*+ city*/);
+                    break;
+                case R.id.a:
+                    place.setText(R.string.kaz);
+                    break;
+                case R.id.b:
+                    place.setText(R.string.mos);
+                    break;
+                case R.id.c:
+                    place.setText(R.string.spb);
+                    break;
+                default:
+                    place.setText("Something went wrong " + city);
+            }
+
         }
+
 
         // place.setText(""+city+"\n"+R.id.a+"\n"+R.id.b+"\n"+R.id.c);
 
@@ -117,7 +121,8 @@ public class OutputFragment extends Fragment implements View.OnClickListener {
                 intent.setData(uri);
                 if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
                     startActivity(intent);
-                } else ViewUtilities.makeToast(getActivity().getApplicationContext(), "There is no relevant app");
+                } else
+                    ViewUtilities.makeToast(getActivity().getApplicationContext(), "There is no relevant app");
 
                 Log.d(TAG, "обработка нажатия кнопки Double check with Yandex");
             }
@@ -137,9 +142,19 @@ public class OutputFragment extends Fragment implements View.OnClickListener {
                 intent.putExtra(Intent.EXTRA_TEXT, "Email body"); // Email body
                 if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
                     startActivity(intent);
-                } else ViewUtilities.makeToast(getActivity().getApplicationContext(), "There is no relevant app");
+                } else
+                    ViewUtilities.makeToast(getActivity().getApplicationContext(), "There is no relevant app");
 
                 Log.d(TAG, "обработка нажатия кнопки Share with friends");
+            }
+        });
+
+        Button buttonGetWeatherHistory = getView().findViewById(R.id.button_temp_history);
+        buttonGetWeatherHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ThirdActivity.class);
+                startActivity(intent);
             }
         });
 

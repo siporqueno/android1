@@ -16,4 +16,28 @@
     <string name="city_not_selected">City is not selected</string>
     <string name="double_check_with_yandex">Double check with Yandex</string>
     <string name="share_with_friends">Share with friends</string>
+    <string name="get_temperature_history">Get temperature history</string>
+    <string-array name="temperatures_history">
+        <item>11 February 2019, -1 \u2103</item>
+        <item>10 February 2019, -1 \u2103</item>
+        <item>9 February 2019, -1 \u2103</item>
+        <item>8 February 2019, -1 \u2103</item>
+        <item>7 February 2019, -1 \u2103</item>
+        <item>6 February 2019, -1 \u2103</item>
+        <item>5 February 2019, -1 \u2103</item>
+        <item>4 February 2019, -1 \u2103</item>
+        <item>3 February 2019, -1 \u2103</item>
+        <item>2 February 2019, -1 \u2103</item>
+        <item>1 February 2019, -1 \u2103</item>
+        <item>31 January 2019, -1 \u2103</item>
+        <item>30 January 2019, -1 \u2103</item>
+        <item>29 January 2019, -1 \u2103</item>
+        <item>28 January 2019, -1 \u2103</item>
+        <item>27 January 2019, -1 \u2103</item>
+        <item>26 January 2019, -1 \u2103</item>
+        <item>25 January 2019, -1 \u2103</item>
+        <item>24 January 2019, -1 \u2103</item>
+        <item>23 January 2019, -1 \u2103</item>
+        <item>22 January 2019, -1 \u2103</item>
+    </string-array>
 </resources>
