@@ -17,4 +17,28 @@
     <string name="city_not_selected">Город не выбран</string>
     <string name="double_check_with_yandex">Перепроверить с ЯНДЕКС</string>
     <string name="share_with_friends">Поделиться с друзьями</string>
+    <string name="get_temperature_history">Узнать историю температуры</string>
+    <string-array name="temperatures_history">
+        <item>11 февраля 2019, -1 \u2103</item>
+        <item>10 февраля 2019, -1 \u2103</item>
+        <item> 9 февраля 2019, -1  \u2103</item>
+        <item> 8 февраля 2019, +2  \u2103</item>
+        <item> 7 февраля 2019, -1  \u2103</item>
+        <item> 6 февраля 2019, -1  \u2103</item>
+        <item> 5 февраля 2019, -1  \u2103</item>
+        <item> 4 февраля 2019, +3  \u2103</item>
+        <item> 3 февраля 2019,  0  \u2103</item>
+        <item> 2 февраля 2019, -4  \u2103</item>
+        <item> 1 февраля 2019, -2  \u2103</item>
+        <item>31 января 2019,  +1  \u2103</item>
+        <item>30 января 2019,  -2  \u2103</item>
+        <item>29 января 2019,  -3  \u2103</item>
+        <item>28 января 2019,  -7  \u2103</item>
+        <item>27 января 2019,  -8  \u2103</item>
+        <item>26 января 2019, -11  \u2103</item>
+        <item>25 января 2019, -10  \u2103</item>
+        <item>24 января 2019, -11  \u2103</item>
+        <item>23 января 2019, -11  \u2103</item>
+        <item>22 января 2019, -13  \u2103</item>
+    </string-array>
 </resources>
