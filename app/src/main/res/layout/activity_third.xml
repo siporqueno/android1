@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/selected_city"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_gravity="center"
+        android:text="@string/mos"
+        android:textSize="25sp" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
@@ -10,4 +19,4 @@
         android:layout_height="wrap_content"/>
 
 
-</FrameLayout>
+</LinearLayout>

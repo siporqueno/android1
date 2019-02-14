@@ -17,6 +17,7 @@ import com.example.lessonone.utils.ViewUtilities;
 public class OutputFragment extends Fragment implements View.OnClickListener {
 
     float temperature;
+    String cityName;
     public static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
@@ -54,20 +55,22 @@ public class OutputFragment extends Fragment implements View.OnClickListener {
             TextView place = getView().findViewById(R.id.place);
             switch (city) {
                 case -1:
-                    place.setText(getString(R.string.city_not_selected) /*+ city*/);
+                    cityName = getString(R.string.city_not_selected);
                     break;
                 case R.id.a:
-                    place.setText(R.string.kaz);
+                    cityName = getString(R.string.kaz);
                     break;
                 case R.id.b:
-                    place.setText(R.string.mos);
+                    cityName = getString(R.string.mos);
                     break;
                 case R.id.c:
-                    place.setText(R.string.spb);
+                    cityName = getString(R.string.spb);
                     break;
                 default:
-                    place.setText("Something went wrong " + city);
+                    cityName = getString(R.string.sth_wrong);
             }
+
+            place.setText(cityName);
 
         }
 
@@ -95,7 +98,7 @@ public class OutputFragment extends Fragment implements View.OnClickListener {
         TextView humidity2 = getView().findViewById(R.id.humidity_2);
         if (humidity) humidity2.setVisibility(View.VISIBLE);
 
-        // Changed getActivity() for getView()
+        /*// Changed getActivity() for getView()
         Button buttonBack = getView().findViewById(R.id.button_back);
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,11 +107,11 @@ public class OutputFragment extends Fragment implements View.OnClickListener {
                 getActivity().finish();
                 Log.d(TAG, "обработка нажатия кнопки Back");
             }
-            /* public void onClick(View v) {
+             *//*public void onClick(View v) {
                  // Code here executes on main thread after user presses button
                  wType.setText(R.string.weather_update);
-             } */
-        });
+             } *//*
+        });*/
 
         // Changed getActivity() for getView()
         Button buttonDoubleCheck = getView().findViewById(R.id.button_double_check);
@@ -154,6 +157,7 @@ public class OutputFragment extends Fragment implements View.OnClickListener {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), ThirdActivity.class);
+                intent.putExtra("cityName", cityName);
                 startActivity(intent);
             }
         });
