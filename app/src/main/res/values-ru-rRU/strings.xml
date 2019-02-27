@@ -19,7 +19,8 @@
     <string name="share_with_friends">Поделиться с друзьями</string>
     <string name="get_temperature_history">Узнать историю температуры</string>
     <string name="daytime">Днём</string>
-    <string name="sth_wrong">Something went wrong</string>
+    <string name="something_wrong">Что-то пошло не так</string>
+    <string name="url_pogoda">https://yandex.ru/pogoda/%s</string>
     <string-array name="temperatures_history">
         <item>11 февраля 2019, -1 \u2103</item>
         <item>10 февраля 2019, -1 \u2103</item>

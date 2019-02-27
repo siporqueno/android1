@@ -18,6 +18,7 @@ public class OutputFragment extends Fragment implements View.OnClickListener {
 
     float temperature;
     String cityName;
+    String cityIdForYandex;
     public static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
@@ -56,18 +57,23 @@ public class OutputFragment extends Fragment implements View.OnClickListener {
             switch (city) {
                 case -1:
                     cityName = getString(R.string.city_not_selected);
+                    cityIdForYandex = cityName;
                     break;
                 case R.id.a:
                     cityName = getString(R.string.kaz);
+                    cityIdForYandex = "kazan";
                     break;
                 case R.id.b:
                     cityName = getString(R.string.mos);
+                    cityIdForYandex = "moscow";
                     break;
                 case R.id.c:
                     cityName = getString(R.string.spb);
+                    cityIdForYandex = "saint-petersburg";
                     break;
                 default:
-                    cityName = getString(R.string.sth_wrong);
+                    cityName = getString(R.string.something_wrong);
+                    cityIdForYandex = cityName;
             }
 
             place.setText(cityName);
@@ -120,7 +126,7 @@ public class OutputFragment extends Fragment implements View.OnClickListener {
             public void onClick(View view) {
                 // Code here executes on main thread after user presses button
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                Uri uri = Uri.parse("http://yandex.ru/pogoda");
+                Uri uri = Uri.parse(getString(R.string.url_pogoda, cityIdForYandex));
                 intent.setData(uri);
                 if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
                     startActivity(intent);
