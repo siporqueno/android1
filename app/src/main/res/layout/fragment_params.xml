@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".screens.ParamsFragment">
 
@@ -60,10 +61,12 @@
         android:layout_height="wrap_content"
         android:text="@string/hm" />
 
-    <Button
+
+    <android.support.design.button.MaterialButton
         android:id="@+id/button_get_weather"
         style="@style/ButtonStyleNo1"
-        android:text="@string/button_get_weather_name" />
+        app:cornerRadius="10sp"
+        android:text="@string/button_get_weather_name"/>
 
     <!--
     <TextView

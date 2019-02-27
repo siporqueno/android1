@@ -1,7 +1,6 @@
 package com.example.lessonone.screens;
 
 import android.support.annotation.NonNull;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,19 +10,19 @@ import android.widget.TextView;
 import com.example.lessonone.R;
 import com.example.lessonone.utils.ViewUtilities;
 
-class TempHistAdapter extends RecyclerView.Adapter<TempHistAdapter.TempHistViewHolder> {
+class FormerTempHistAdapter extends RecyclerView.Adapter<FormerTempHistAdapter.TempHistViewHolder> {
 
     private final String[] temperaturesHistory;
 
-    TempHistAdapter(String[] temperaturesHistory){
+    FormerTempHistAdapter(String[] temperaturesHistory){
         this.temperaturesHistory = temperaturesHistory;
     }
 
     @NonNull
     @Override
     public TempHistViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        CardView cardView= (CardView) LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_view_item,viewGroup, false);
-        TempHistViewHolder tempHistViewHolder = new TempHistViewHolder(cardView);
+        TextView textView= (TextView) LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.text_view_item,viewGroup, false);
+        TempHistViewHolder tempHistViewHolder = new TempHistViewHolder(textView);
         return tempHistViewHolder;
     }
 
@@ -39,12 +38,11 @@ class TempHistAdapter extends RecyclerView.Adapter<TempHistAdapter.TempHistViewH
 
     class TempHistViewHolder extends RecyclerView.ViewHolder{
 
-        CardView cardView;
         TextView textView;
 
-        public TempHistViewHolder(@NonNull final CardView cardView) {
-            super(cardView);
-            this.textView=(TextView)cardView.findViewById(R.id.second_text_view_in_card_view);
+        public TempHistViewHolder(@NonNull final TextView textView) {
+            super(textView);
+            this.textView=textView;
             this.textView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
