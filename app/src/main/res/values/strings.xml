@@ -18,7 +18,8 @@
     <string name="share_with_friends">Share with friends</string>
     <string name="get_temperature_history">Get temperature history</string>
     <string name="daytime">Daytime</string>
-    <string name="sth_wrong">Something went wrong</string>
+    <string name="something_wrong">Something went wrong</string>
+    <string name="url_pogoda">https://yandex.ru/pogoda/%s</string>
     <string-array name="temperatures_history">
         <item>11 February 2019, -1 \u2103</item>
         <item>10 February 2019, -1 \u2103</item>

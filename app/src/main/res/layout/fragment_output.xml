@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -70,19 +70,20 @@
             android:id="@+id/button_double_check"
             style="@style/ButtonStyleNo1"
             android:text="@string/double_check_with_yandex"
-            app:cornerRadius="10sp"/>
+            app:cornerRadius="10sp" />
 
         <android.support.design.button.MaterialButton
             android:id="@+id/button_share"
             style="@style/ButtonStyleNo1"
+            app:icon="@drawable/ic_baseline_share_24px"
             android:text="@string/share_with_friends"
-            app:cornerRadius="10sp"/>
+            app:cornerRadius="10sp" />
 
         <android.support.design.button.MaterialButton
             android:id="@+id/button_temp_history"
             style="@style/ButtonStyleNo1"
             android:text="@string/get_temperature_history"
-            app:cornerRadius="10sp"/>
+            app:cornerRadius="10sp" />
 
     </LinearLayout>
 
